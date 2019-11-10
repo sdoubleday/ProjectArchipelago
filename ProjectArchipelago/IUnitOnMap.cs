@@ -4,15 +4,21 @@ namespace ProjectArchipelago
 {
     public interface IUnitOnMap
     {
+
         /// <summary>
-        /// Unit's Game Side
+        /// Destroy this unit, and resolve any relevant triggers.
         /// </summary>
-        /// <returns>Unit's Game Side</returns>
-        IGameSide GetMyGameSide();
+        void DestroyThisUnit();
         /// <summary>
-        /// Unit's Game Side
+        /// Remove this unit without "Destroyed" triggers.
         /// </summary>
-        /// <param name="value"></param>
-        void SetMyGameSide(IGameSide value);
+        void RemoveThisUnit();
+        /// <summary>
+        /// Accepts numeric amount of damage.
+        /// </summary>
+        /// <param name="DamageAmount"></param>
+        /// <returns>Remaining damage capacity</returns>
+        int AcceptDamage(int DamageAmount);
+
     }
 }
