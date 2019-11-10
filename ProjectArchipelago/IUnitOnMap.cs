@@ -19,6 +19,11 @@ namespace ProjectArchipelago
         /// <param name="DamageAmount"></param>
         /// <returns>Remaining damage capacity</returns>
         int AcceptDamage(int DamageAmount);
+        /// <summary>
+        /// Get the amount of damage this unit generates.
+        /// </summary>
+        /// <returns>Amount of damage</returns>
+        int GenerateDamage();
 
     }
 }
